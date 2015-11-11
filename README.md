@@ -1,1 +1,1 @@
-This is my fork to add some features that I've wanted to this extension for a while.
+This is my fork to add some features that I've wanted to this extension.
