@@ -27,13 +27,12 @@ original_title = {
         // build details-title-container
         var details_title_container_element = document.createElement("div");
         details_title_container_element.setAttribute("class", "details-title-container");
-        details_title_container_element.setAttribute("id", "original-movie-title");
-        details_title_container_element.setAttribute("style", "margin-top: -88px");
+        details_title_container_element.setAttribute("id", "original-movie-title-container");
 
         // build item-title
         var item_title_element = document.createElement("h1");
         item_title_element.setAttribute("class", "item-title");
-        item_title_element.setAttribute("style", "color: #999; font-size: 24px");
+        item_title_element.setAttribute("id", "original-movie-title")
 
         // build text
         var title_text = document.createTextNode(original_movie_title);
