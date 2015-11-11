@@ -522,6 +522,15 @@ function main() {
                         utils.debug("rotten_tomatoes_link plugin is disabled");
                     }
 
+                    // insert original title
+                    if (settings["original_title"] === "on") {
+                        utils.debug("original_title is enabled");
+                        original_title.init(metadata_xml);
+                    }
+                    else {
+                        utils.debug("original_title is disabled");
+                    }
+
                     // create trakt link
                     if (settings["trakt_movies"] === "on") {
                         utils.debug("trakt plugin is enabled");
