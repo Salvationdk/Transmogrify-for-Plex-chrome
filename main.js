@@ -235,6 +235,9 @@ function getServerAddresses(requests_url, plex_token, callback) {
                 for (var j = 0; j < connections.length; j++) {
                     var connection = connections[j];
                     var uri = connection.hasAttribute("uri") ? connection.getAttribute("uri") : window.location.protocol + "//" + connection.getAttribute("address") + ":" + connection.getAttribute("port");
+                    if (uri.indexOf("https") < 0) {
+                        continue;
+                    }
                     var local = !connection.hasAttribute("uri") || connection.getAttribute("local") == 1;
                     task_counter += 1;
                     (function (machine_identifier, name, uri, access_token, local) {
@@ -509,6 +512,15 @@ function main() {
                     }
                     else {
                         utils.debug("rotten_tomatoes_link plugin is disabled");
+                    }
+
+                    // insert original title
+                    if (settings["original_title"] === "on") {
+                        utils.debug("original_title is enabled");
+                        original_title.init(metadata_xml);
+                    }
+                    else {
+                        utils.debug("original_title is disabled");
                     }
 
                     // create trakt link

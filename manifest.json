@@ -21,6 +21,7 @@
         "plugins/imdb.js",
         "plugins/letterboxd.js",
         "plugins/missing_episodes.js",
+        "plugins/original_title.js",
         "plugins/random_picker.js",
         "plugins/rotten_tomatoes.js",
         "plugins/stats.js",

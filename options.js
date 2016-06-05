@@ -7,6 +7,7 @@ function saveOptions() {
     var rotten_tomatoes_link = document.querySelector("input[name='rotten_tomatoes_link']:checked").value;
     var rotten_tomatoes_audience = document.querySelector("input[name='rotten_tomatoes_audience']:checked").value;
     var rotten_tomatoes_citizen = document.querySelector("input[name='rotten_tomatoes_citizen']:checked").value;
+    var original_title = document.querySelector("input[name='original_title']:checked").value;
     var trakt_movies = document.querySelector("input[name='trakt_movies']").checked;
     var trakt_shows = document.querySelector("input[name='trakt_shows']").checked;
     var random_picker = document.querySelector("input[name='random_picker']:checked").value;
@@ -30,6 +31,7 @@ function saveOptions() {
     utils.storage_set("rotten_tomatoes_link", rotten_tomatoes_link);
     utils.storage_set("rotten_tomatoes_audience", rotten_tomatoes_audience);
     utils.storage_set("rotten_tomatoes_citizen", rotten_tomatoes_citizen);
+    utils.storage_set("original_title", original_title);
     utils.storage_set("missing_episodes", missing_episodes);
     utils.storage_set("canistreamit", canistreamit);
     utils.storage_set("actor_profiles", actor_profiles);
@@ -98,6 +100,9 @@ function restoreOptions() {
 
             var rotten_tomatoes_citizen_radio_button = document.getElementById("rotten_tomatoes_citizen_" + results["rotten_tomatoes_citizen"]);
             rotten_tomatoes_citizen_radio_button.checked = true;
+
+            var original_title_radio_button = document.getElementById("original_" + results["original_title"]);
+            original_title_radio_button.checked = true;
 
             var trakt_movies_checkbox = document.getElementById("trakt_movies");
             if (results["trakt_movies"] === "on") {

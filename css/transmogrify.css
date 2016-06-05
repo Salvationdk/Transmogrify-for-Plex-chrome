@@ -30,6 +30,15 @@
     color: white !important;
 }
 
+#original-movie-title-container {
+    margin-top: -85px;
+}
+
+#original-movie-title {
+    color: #999;
+    font-size: 24px;
+}
+
 #trakt-rating {
   display: inline-block;
   margin-left: 10px;
